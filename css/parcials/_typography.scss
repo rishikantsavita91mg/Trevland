@@ -1,0 +1,133 @@
+h1 {
+    @include fontProperties ($fontsizeXX-Large, $lineheight-XXL, 700, $whiteColor, $secoundryFontfamily);
+}
+
+h2 {
+    @include fontProperties ($fontsizeX-Large, $lineheight-XL, 500, $blackColor, $secoundryFontfamily);
+
+    @media screen and (max-width: $xl) {
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    @media screen and (max-width: $lg) {
+        font-size: 30px;
+        line-height: 42px;
+    }
+
+    @media screen and (max-width: $lg) {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    @media screen and (max-width: $sm) {
+        font-size: 19px;
+        line-height: 28px;
+    }
+
+}
+
+h3 {
+    @include fontProperties ($fontsize-Large, $lineheight-L, 500, $blackColor, $secoundryFontfamily);
+}
+
+h4 {
+    @include fontProperties ($fontsize-Medium, $lineheight-M, 500, $blackColor, $secoundryFontfamily);
+}
+
+h5 {
+    @include fontProperties ($fontsize-Small, $lineheight-S, 400, $blackColor, $primaryFontfamily);
+}
+
+h6 {
+    @include fontProperties ($fontsizeX-Small, $lineheight-XS, 400, $paraBlackColor, $primaryFontfamily);
+}
+
+img {
+    @include imageProperties (100%, 100%, cover, center);
+}
+
+p {
+    @include fontProperties ($fontsize-Small, $lineheight-S, 400, $paraWhiteColor, $primaryFontfamily);
+}
+
+span {
+    @include fontProperties ($fontsize-Medium, $lineheight-M, 400, $anchorBlackColor, $secoundryFontfamily);
+    text-transform: capitalize;
+}
+
+a,
+button {
+    @include fontProperties ($fontsize-Small, $lineheight-S, 500, $blackColor, $primaryFontfamily);
+}
+
+.heading {
+    @include headingProperties (center, 40px, 10px);
+
+    @media screen and (max-width: $xl) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: $lg) {
+        padding-bottom: 0;
+    }
+
+    @media screen and (max-width: $md) {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        text-transform: capitalize;
+    }
+
+    p {
+        @include headingParaProperties ($paraBlackColor, 65%, 0 auto, 20px);
+
+        @media screen and (max-width: $xl) {
+            padding-top: 10px;
+        }
+
+        @media screen and (max-width: $lg) {
+            padding-top: 6px;
+            font-size: $fontsizeX-Small;
+            line-height: 24px;
+        }
+
+        @media screen and (max-width: $md) {
+            padding-top: 4px;
+            width: 90%;
+        }
+
+        @media screen and (max-width: $sm) {
+            padding-top: 0;
+            width: 100%;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 22px;
+        }
+
+    }
+}
+
+.logotext {
+    @extend %-logo;
+}
+
+.btn {
+    @extend %-anchorButton;
+}
+
+.btn:hover {
+    background: transparent;
+    border: 1px solid $btnColor;
+    color: $btnColor;
+}
+
+.imgeffect {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imgeffect img:hover {
+    transform: scale(1.2);
+}

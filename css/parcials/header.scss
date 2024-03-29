@@ -1,0 +1,145 @@
+.header-section {
+    @include sectionPosition (absolute, 100%, $z-Index);
+    padding-top: 30px;
+    top: 0;
+
+    @media screen and (max-width: $xl) {
+        padding-top: 20px;
+    }
+
+    @media screen and (max-width: $lg) {
+        padding-top: 12px;
+    }
+
+    @media screen and (max-width: $sm) {
+        padding-top: 4px;
+    }
+
+    .header-wrapper {
+        @include displayProperties (flex, center, space-between);
+
+        .logo {
+            a {
+                @media screen and (max-width: $md) {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 2px;
+                }
+
+                @media screen and (max-width: $md) {
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 1px;
+                }
+
+            }
+        }
+
+        .menu {
+
+            @media screen and (max-width: $sm) {
+                display: none;
+            }
+
+
+
+            .navigation {
+                @include displayProperties (flex, center, space-between);
+                text-transform: capitalize;
+                gap: 50px;
+
+                @media screen and (max-width: $xl) {
+                    gap: 30px;
+                }
+
+                @media screen and (max-width: $lg) {
+                    gap: 20px;
+                }
+
+                @media screen and (max-width: $md) {
+                    gap: 12px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 0;
+                    background: #C9453B;
+                    position: absolute;
+                    left: 0;
+                    top: 28px;
+                    z-index: 22;
+                    padding: 20px 0;
+                    transition: all ease 0.5s;
+                }
+
+                li {
+
+                    @media screen and (max-width: $sm) {
+                        width: 100%;
+                        padding-left: 30px;
+                    }
+
+                    a {
+                        color: $whiteColor;
+
+                        @media screen and (max-width: $md) {
+                            font-size: 15px;
+                            line-height: 22px;
+                            font-weight: 400;
+                        }
+
+                        @media screen and (max-width: $sm) {
+                            color: $whiteColor;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .logo-btn {
+            a {
+
+                @media screen and (max-width: $md) {
+                    font-size: 14px;
+                    line-height: 18px;
+                    padding: 7px 10px 7px 10px;
+                }
+
+
+                @media screen and (max-width: $sm) {
+                    display: none;
+                }
+            }
+        }
+
+        .menu-bar {
+            display: none;
+
+            @media screen and (max-width: $sm) {
+                display: flex;
+                align-items: center;
+                transition: all ease 0.5s;
+            }
+
+            i {
+                color: $whiteColor;
+                font-size: 16px;
+                transition: all ease 0.5s;
+            }
+        }
+
+        .close-bar {
+            display: none;
+
+            i {
+                color: $whiteColor;
+                transition: all ease 0.5s;
+            }
+
+        }
+
+
+    }
+}

@@ -1,0 +1,216 @@
+.offer-content {
+    @include displayProperties (flex, center, space-between);
+
+    flex-wrap: wrap;
+    margin-left: -72px;
+
+    @media screen and (max-width: $xl) {
+        margin-left: -30px;
+    }
+
+    .slick-dots {
+        @include displayProperties (flex, center, center);
+        width: 100%;
+        margin-top: 50px;
+
+        @media screen and (max-width: $lg) {
+            margin-top: 30px;
+        }
+
+        li {
+            @include displayProperties (flex, center, center);
+            height: 30px;
+
+            @media screen and (max-width: $md) {
+                height: 26px;
+            }
+
+            button {
+                width: 75px;
+                height: 5px;
+                font-size: 0;
+                border-radius: $borderRadiusMedium;
+                background-color: $dotsColor;
+                opacity: 0.4;
+
+                @media screen and (max-width: $lg) {
+                    width: 55px;
+                    height: 4px;
+                }
+
+                @media screen and (max-width: $md) {
+                    width: 40px;
+                    height: 3px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    width: 25px;
+                }
+
+            }
+
+            button:hover {
+                background-color: $dotsColor;
+                opacity: 1;
+            }
+        }
+
+        .slick-active {
+            button {
+                background-color: $dotsColor;
+                opacity: 1;
+            }
+        }
+    }
+
+    .slick-current {
+        opacity: 0.6;
+    }
+
+    // offer arrows here 
+    .slick-prev,
+    .slick-next {
+        font-size: 0;
+        position: absolute;
+        bottom: 0;
+        left: 30%;
+
+        @media screen and (max-width: $xl) {
+            left: 23%;
+        }
+    }
+
+    .slick-next {
+        left: initial;
+        right: 30%;
+
+        @media screen and (max-width: $xl) {
+            right: 26%;
+        }
+    }
+
+    .slick-prev::before {
+        content: '<<';
+    }
+
+    .slick-next::before {
+        content: '>>';
+    }
+
+    .slick-prev::before,
+    .slick-next::before {
+        position: absolute;
+        font-size: 30px;
+
+        @media screen and (max-width: $lg) {
+            font-size: 24px;
+        }
+
+        @media screen and (max-width: $md) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: $sm) {
+            font-size: 17px;
+        }
+
+    }
+
+    .offer-item-slider {
+        padding: 0 0 0 72px;
+
+        @media screen and (max-width: $xl) {
+            padding: 0 0 0 30px;
+        }
+
+        .offer-boxes {
+            @include boxesProperties (100%, initial, $borderRadiusMedium, initial, initial);
+
+            .offer-content-text {
+                padding-top: 20px;
+                text-transform: capitalize;
+
+                h3 {
+                    @media screen and (max-width: $lg) {
+                        font-size: 22px;
+                        line-height: 30px;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        font-size: 20px;
+                        line-height: 24px;
+
+                    }
+
+                }
+
+                h6,
+                h5 {
+                    margin-top: 8px;
+
+                    @media screen and (max-width: $xl) {
+                        margin-top: 6px;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        margin-top: 2px;
+                    }
+
+                }
+
+                .offer-text-details {
+                    @include displayProperties (flex, center, flex-start);
+                    gap: 50px;
+                    margin-top: 8px;
+
+                    @media screen and (max-width: $xl) {
+                        gap: 25px;
+                    }
+
+                    @media screen and (max-width: $lg) {
+                        margin-top: 5px;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        margin-top: 2px;
+                        gap: 70px;
+                    }
+
+                    .offer-text-location,
+                    .offer-text-rating {
+                        @include displayProperties (flex, center, flex-start);
+                        gap: 13px;
+
+                        @media screen and (max-width: $xl) {
+                            gap: 10px;
+                        }
+
+                        i {
+                            font-size: $fontsize-Large;
+                            color: $locationColor;
+
+                            @media screen and (max-width: $lg) {
+                                font-size: 21px;
+                            }
+                        }
+
+                        span {
+                            font-size: 18px;
+                            line-height: 28px;
+                        }
+                    }
+
+                    .offer-text-rating {
+                        i {
+                            color: $starColor;
+                        }
+
+                        span {
+                            color: $blackColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

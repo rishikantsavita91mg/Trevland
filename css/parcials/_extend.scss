@@ -1,0 +1,47 @@
+%-anchorButton {
+    background: $btnColor;
+    padding: $padding-btn;
+    font-family: $primaryFontfamily;
+    font-size: $fontsize-Small;
+    color: $whiteColor;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: capitalize;
+    border-radius: 5px;
+    display: inline-block;
+    border: 1px solid $btnColor;
+    transition: all ease 0.5s;
+
+    @media screen and (max-width: $xl) {
+        padding: 11px 28px 10px 30px ;
+    }
+
+    @media screen and (max-width: $lg) {
+        padding: 9px 26px 9px 28px;
+        font-size: 17px;
+        line-height: 22px;     
+    }
+
+    @media screen and (max-width: $md) {
+        
+    }
+
+}
+
+%-logo {
+    font-family: $logoFontfamily;
+    font-weight: 400;
+    color: $whiteColor;
+    font-size: $fontsize-Large;
+    line-height: 36px;
+    letter-spacing: 4px;
+    text-transform: capitalize;
+
+    @media screen and (max-width: $xl) {
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: 3px;
+    }
+    
+}
+

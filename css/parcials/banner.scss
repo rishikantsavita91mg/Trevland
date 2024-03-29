@@ -1,0 +1,95 @@
+.banner-section {
+    position: relative;
+    top: 0;
+
+    .banner-wrapper {
+        @include sectionPosition (absolute, 100%, $z-Index);
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media screen and (max-width: $sm) {
+            z-index: 0;
+        }
+
+        .banner-content {
+            h1 {
+                width: 70%;
+                margin-bottom: 30px;
+
+                @media screen and (max-width: $xl) {
+                    font-size: 46px;
+                    line-height: 58px;
+                    width: 59%;
+                    margin-bottom: 18px;
+                }
+
+                @media screen and (max-width: $lg) {
+                    font-size: 36px;
+                    line-height: 48px;
+                    width: 61%;
+                }
+
+                @media screen and (max-width: $md) {
+                    font-size: 26px;
+                    line-height: 32px;
+                    margin-bottom: 4px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    font-size: 20px;
+                    line-height: 26px;
+                    margin-bottom: 2px;
+                    width: 75%;
+                }
+
+            }
+
+
+            p {
+                width: 40%;
+                margin-bottom: 40px;
+
+                @media screen and (max-width: $xl) {
+                    width: 40%;
+                    font-size: 17px;
+                    line-height: 24px;
+                    margin-bottom: 24px;
+                }
+
+                @media screen and (max-width: $lg) {
+                    font-size: $fontsizeX-Small;
+                    width: 60%;
+                }
+
+                @media screen and (max-width: $md) {
+                    width: 70%;
+                    margin-bottom: 16px;
+                    line-height: 20px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    width: 70%;
+                    line-height: 16px;
+                    font-size: 12px;
+                    margin-bottom: 8px;
+                    word-spacing: -1px;
+                }
+            }
+
+            a {
+                @media screen and (max-width: $md) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+
+                @media screen and (max-width: $md) {
+                    font-size: 14px;
+                    line-height: 18px;
+                    padding: 7px 10px 7px 10px;
+                }
+
+
+            }
+        }
+    }
+}

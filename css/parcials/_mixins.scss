@@ -1,0 +1,41 @@
+@mixin fontProperties ($fontSize, $fontLineheight, $fontweight, $fontColor, $fontfamily) {
+    font-size: $fontSize;
+    line-height: $fontLineheight;
+    font-weight: $fontweight;
+    color: $fontColor;
+    font-family: $fontfamily;
+}
+@mixin displayProperties ($display, $alignItems, $justifyContent) {
+    display: $display;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+@mixin imageProperties ($imageWidth, $imageHeight, $imageObjectfit, $imageObjectpostion) {
+    width: $imageWidth;
+    height: $imageHeight;
+    object-fit: $imageObjectfit;
+    object-position: $imageObjectpostion;
+}
+@mixin sectionPosition ($positionAbsolute, $sectionWidth, $z-Index) {
+    position: $positionAbsolute;
+    width: $sectionWidth;
+    z-index: $z-Index;
+}
+@mixin boxesProperties ($weightValue, $heightValue, $borderRadiusValue, $boxShadowValue, $boxBorder) {
+    width: $weightValue;
+    height: $heightValue;
+    border-radius: $borderRadiusValue;
+    box-shadow: $boxShadowValue;
+    border: $boxBorder;
+}
+@mixin headingProperties ($textalignCenter, $headingMargin, $padding-X-small) {
+    text-align: $textalignCenter;   
+    margin-bottom: $headingMargin;
+    padding-bottom: $padding-X-small;
+}
+@mixin headingParaProperties ($headingParaColor, $headingParaWidth, $headingParaMargin, $headingParaPaddingTop) {
+    color: $headingParaColor;
+    width: $headingParaWidth;
+    margin: $headingParaMargin;
+    padding-top: $headingParaPaddingTop;
+}

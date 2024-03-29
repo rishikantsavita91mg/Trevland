@@ -1,0 +1,14 @@
+@import './parcials/variables';
+@import './parcials/base';
+@import './parcials/mixins';
+@import './parcials/typography';
+@import './parcials/extend';
+
+// Sections imports 
+
+@import './parcials/header';
+@import './parcials/banner';
+@import './parcials/location';
+@import './parcials/offer';
+@import './parcials/blog';
+@import './parcials/footer';

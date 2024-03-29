@@ -1,0 +1,260 @@
+.footer-section {
+    background: $footerColor;
+    padding: 70px 0 78px;
+
+    @media screen and (max-width: $xl) {
+        padding: 50px 0 58px;
+    }
+
+    @media screen and (max-width: $lg) {
+        padding: 42px 0 52px;
+    }
+
+    @media screen and (max-width: $md) {
+        padding: 35px 0 42px;
+    }
+
+    .footer-wrapper {
+        @include displayProperties (flex, flex-start, flex-start);
+
+        @media screen and (max-width: $md) {
+            flex-wrap: wrap;
+            row-gap: 10px;
+        }
+
+        @media screen and (max-width: $sm) {
+            row-gap: 20px;
+        }
+
+        .footer-content {
+            width: 25%;
+
+            @media screen and (max-width: $md) {
+                width: 40%;
+            }
+
+            @media screen and (max-width: $sm) {
+                width: 100%;
+            }
+
+            .footer-logo {
+                margin-bottom: 40px;
+
+                @media screen and (max-width: $xl) {
+                    margin-bottom: 25px;
+                }
+
+                @media screen and (max-width: $lg) {
+                    margin-bottom: 20px;
+                }
+
+                @media screen and (max-width: $lg) {
+                    margin-bottom: 10px;
+                }
+
+                .logotext {
+                    color: $blackColor;
+
+                    @media screen and (max-width: $lg) {
+                        font-size: 20px;
+                        line-height: 28px;
+                        letter-spacing: 2px;
+                    }
+
+                    @media screen and (max-width: $lg) {
+                        font-size: 18px;
+                        line-height: 26px;
+                        letter-spacing: 1px;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        letter-spacing: 3px;
+                    }
+
+                }
+            }
+
+            h5 {
+                text-transform: capitalize;
+
+                @media screen and (max-width: $lg) {
+                    line-height: 24px;
+                }
+            }
+
+            .footer-anchor {
+                margin: 10px 0 20px;
+                font-weight: 400;
+
+                @media screen and (max-width: $xl) {
+                    margin: 6px 0 12px;
+                }
+
+                @media screen and (max-width: $lg) {
+                    font-size: $fontsizeX-Small;
+                    line-height: $lineheight-XS;
+                }
+
+                @media screen and (max-width: $md) {
+                    margin-bottom: 20px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    margin-bottom: 10px;
+                    margin-top: 2px;
+                }
+
+            }
+
+            .footer-media {
+                @include displayProperties (flex, center, flex-start);
+                gap: 27px;
+
+                @media screen and (max-width: $xl) {
+                    gap: 20px;
+                }
+
+                .footer-media-image {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        .footer-services {
+            width: 20%;
+
+            @media screen and (max-width: $md) {
+                width: 30%;
+            }
+
+            @media screen and (max-width: $sm) {
+                width: 100%;
+            }
+
+        }
+
+        .footer-legal {
+            width: 25%;
+
+            @media screen and (max-width: $md) {
+                width: 30%;
+            }
+
+            @media screen and (max-width: $sm) {
+                width: 100%;
+            }
+
+        }
+
+        .footer-services,
+        .footer-legal {
+            h5 {
+                font-weight: 500;
+                text-transform: capitalize;
+                margin-bottom: 20px;
+                line-height: 24px;
+
+                @media screen and (max-width: $lg) {
+                    margin-bottom: 16px;
+                }
+
+                @media screen and (max-width: $md) {
+                    margin-bottom: 8px;
+                }
+
+            }
+
+            ul {
+                li {
+                    margin-bottom: 20px;
+                    text-transform: capitalize;
+
+                    @media screen and (max-width: $xl) {
+                        margin-bottom: 16px;
+                    }
+
+                    @media screen and (max-width: $lg) {
+                        margin-bottom: 10px;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        margin-bottom: 6px;
+                    }
+
+                    a {
+                        font-weight: 400;
+
+                        @media screen and (max-width: $md) {
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .footer-form {
+            width: 30%;
+
+            @media screen and (max-width: $md) {
+                width: 80%;
+            }
+
+            @media screen and (max-width: $sm) {
+                width: 100%;
+            }
+
+            h3 {
+                letter-spacing: 2px;
+                font-family: $primaryFontfamily;
+                font-weight: 500;
+                margin-bottom: $fontsizeX-Large;
+
+                @media screen and (max-width: $xl) {
+                    margin-bottom: 32px;
+                    letter-spacing: 1.5px;
+                }
+
+                @media screen and (max-width: $lg) {
+                    letter-spacing: 1px;
+                    margin-bottom: 24px;
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+
+                @media screen and (max-width: $md) {
+                    margin-bottom: 14px;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+
+            }
+
+            .form-box {
+                display: flex;
+                gap: 20px;
+
+                @media screen and (max-width: $lg) {
+                    gap: 12px;
+                }
+
+                .email-input {
+                    width: 60%;
+                    padding: 10px 20px;
+
+                    @media screen and (max-width: $lg) {
+                        padding: 6px 12px;
+                        font-size: 15px;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        padding: 3px 8px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
